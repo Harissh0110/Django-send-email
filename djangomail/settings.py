@@ -15,10 +15,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4nmo7l=w)rxu-@n2^@h%(lx&g6x&xr&*pbow+#bst-113p&4@0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False").lower == 'true'
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 
+ALLOWED_HOSTS = ['.vercel.app']
 
 # Application definition
 
@@ -94,6 +95,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+WSGI_APPLICATION = 'djangomail.wsgi.application'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
