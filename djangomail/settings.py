@@ -127,7 +127,8 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    'https://665129339c181fa72f8e14fa--hariprakashh-portfolio.netlify.app/'
+    'https://665129339c181fa72f8e14fa--hariprakashh-portfolio.netlify.app/',
+    'https://hariprakashh-portfolio.netlify.app/'
 ]
 
 #email settings
